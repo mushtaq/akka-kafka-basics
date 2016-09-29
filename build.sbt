@@ -1,4 +1,4 @@
-name := "scala-basics-8"
+name := "akka-kafka-basics"
 
 version := "1.0"
 
@@ -6,6 +6,7 @@ scalaVersion := "2.11.8"
 
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.0" % "test"
 libraryDependencies += "com.typesafe.play" %% "play-json" % "2.5.8"
+libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.4.10"
 
 transitiveClassifiers in Global := Seq(Artifact.SourceClassifier)
 
