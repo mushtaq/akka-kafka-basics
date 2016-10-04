@@ -6,7 +6,9 @@ scalaVersion := "2.11.8"
 
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.0" % "test"
 libraryDependencies += "com.typesafe.play" %% "play-json" % "2.5.8"
-libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.4.10"
+libraryDependencies += "org.scala-lang.modules" %% "scala-async" % "0.9.6-RC5"
+libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.4.8"
+libraryDependencies += "com.typesafe.akka" %% "akka-persistence" % "2.4.8"
 
 transitiveClassifiers in Global := Seq(Artifact.SourceClassifier)
 

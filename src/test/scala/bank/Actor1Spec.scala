@@ -4,7 +4,7 @@ import akka.actor.{ActorRef, ActorSystem, Props}
 import bank.AccountActor.{Deposit, GetBalance}
 import org.scalatest._
 
-class HelloSpec extends FlatSpec with Matchers {
+class Actor1Spec extends FlatSpec with Matchers {
 
   val system = ActorSystem("demo")
   val account = Account("ac123", Customer("cust1", "mushtaq"), 0)
