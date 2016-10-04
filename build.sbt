@@ -12,6 +12,7 @@ libraryDependencies += "com.typesafe.akka" %% "akka-persistence" % "2.4.8"
 libraryDependencies += "org.iq80.leveldb"            % "leveldb"          % "0.7"
 libraryDependencies += "org.fusesource.leveldbjni"   % "leveldbjni-all"   % "1.8"
 libraryDependencies += "com.typesafe.akka" %% "akka-persistence-query-experimental" % "2.4.8"
+libraryDependencies += "com.typesafe.akka" %% "akka-cluster" % "2.4.8"
 
 transitiveClassifiers in Global := Seq(Artifact.SourceClassifier)
 
