@@ -2,8 +2,7 @@ package bank
 
 import akka.actor.ReceiveTimeout
 import akka.persistence.{PersistentActor, SnapshotOffer}
-import bank.AccountActor.Deposit
-import bank.PersistentAccount.{AccountCreated, CreateAccount, Deposited, Snapshot}
+import bank.PersistentAccount._
 
 class PersistentAccount extends PersistentActor {
   override def persistenceId: String = self.path.name
@@ -13,9 +12,6 @@ class PersistentAccount extends PersistentActor {
   self ! ReceiveTimeout
 
   override def receiveCommand: Receive = {
-    case x => persistAsync(x) { event =>
-
-    }
     case CreateAccount(init) => persist(AccountCreated(init)) { event =>
       account = init
       sender() ! "done"
@@ -44,6 +40,7 @@ object PersistentAccount {
   //commands
   case class CreateAccount(init: Account)
   case object Snapshot
+  case class Deposit(amount: Double)
 
   //events
   case class Deposited(amount: Double)
